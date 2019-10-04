@@ -1,0 +1,236 @@
+:root {
+    --baseline: 60px;
+}
+
+
+body {
+    margin: 0;
+    background: #222222;
+}
+
+
+
+header {
+    margin: 0 auto;
+    background: #333333;
+    height: calc(var(--baseline)*2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+
+header section.searchbar{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+header section.dropdown{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+
+
+header input {
+    padding: .51rem;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #111;
+    color: #777;
+    flex: 1;
+    border: .05rem solid #555;
+}
+
+header input:focus{
+    outline: none;
+}
+
+
+
+header button.search{
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    color: #777;
+    background: #444;
+    padding: .57rem 1rem;
+    font-size: 1rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    
+ 
+}
+
+header button.search:hover{
+    background: #555;
+    cursor: pointer;
+}
+
+header button.search:focus{
+    outline:none
+}
+
+header select.pagemobile {
+    display: none;
+}
+
+
+header select {
+    background: #111;
+    color: #777; 
+    flex: 1; 
+}
+
+
+
+main {
+    max-width: 1000px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    
+}
+
+main img {
+    width: 100%;
+    box-shadow: 10px 10px 10px black;
+
+}
+
+main img:hover{
+    cursor: pointer;
+    
+}
+
+
+
+section.nextprevbottom {
+    background: #333333;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+section.nextprevbottom button{
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    color: #777;
+    background: #444;
+    padding: .3rem .4rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 1rem;
+}
+
+section.nextprevbottom button:hover{
+    cursor: pointer;
+    background: #555;
+}
+
+section.nextprevbottom button:focus {
+    outline: none;
+}
+
+section.nextprevbottom button ion-icon{
+    font-size: 24px;
+    padding-top: 4px;
+}
+
+
+section.nextprevbottom p#pageofpages{
+    color:#777 ;
+}
+
+
+section.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .94);
+    z-index: 1;
+}
+
+section.overlay.hide{
+    display: none;
+    animation: fade .4s ease forwards reverse;
+}
+
+section.overlay.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade .4s ease forwards;
+}
+
+section.overlay img {
+    height: 70%;
+}
+
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+
+
+
+
+@media screen and ( max-width: 480px ){
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        padding: .5rem;
+    } 
+    
+    header{
+        height: calc(var(--baseline)*3);   
+    }
+
+    header select.page {
+        display: none;
+    }
+
+    header select.pagemobile {
+        display: flex
+    }
+
+    .searchbar input{
+    margin-left: 3rem;
+    }
+
+    .searchbar button {
+        margin-right: 3rem;
+    }
+
+    header .dropdown{
+        flex-direction: column;
+        
+    }
+
+    .dropdown select {
+        margin: .2rem 4rem;
+    }
+
+}
+
+
+

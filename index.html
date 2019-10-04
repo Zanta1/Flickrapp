@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <section class="overlay hide"></section>
+
+    <header>
+
+        <section class="searchbar">
+            <input type="search" placeholder="Search...">
+            <button class="search"><ion-icon name="search"></ion-icon></button>
+        </section>
+
+        <section class="dropdown">
+
+            <select class="sort">
+                <option value="relevance">Relevance</option>
+                <option value="date-posted-asc">Date uploaded</option>
+                <option value="date-taken-asc">Date taken</option>
+                <option value="interestingness-asc">Interesting</option>
+            </select>
+
+            <select class="license">
+                <option value="0">All Rights Reserved</option>
+                <option value="1">CC IckeKommersiell DelaLika</option>
+                <option value="2">CC IckeKommersiell</option>
+                <option value="3">CC Ickekommersiell IngaBearbetningar</option>
+                <option value="4">CC </option>
+                <option value="5">CC DelaLika</option>
+                <option value="6">CC IngaBearbetningar</option>
+            </select>
+
+
+            <select class="page">
+                <option value="100">100</option>
+                <option value="75">75</option>
+                <option value="50">50</option>
+                <option value="25">25</option>
+                <option value="10">10</option>
+            </select>
+
+            <select class="pagemobile">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select>
+        </section>
+
+    </header>
+
+
+    <main>
+
+    </main>
+
+    <section class="nextprevbottom">
+        <button class="prev" title="Prev Page"><ion-icon name="arrow-round-back"></ion-icon></i></button>
+        <p id="pageofpages"></p>
+        <button class="next" title="Next Page"><ion-icon name="arrow-round-forward"></ion-icon></i></button>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
